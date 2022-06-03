@@ -4,6 +4,7 @@ import CartSummary from './CartSummary'
 import CategoryNavigation from './CategoryNavigation'
 import ProductList from './ProductList'
 import { ProductPageConnector } from './ProductPageConnector'
+import { Link } from 'react-router-dom'
 
 const ProductPages = ProductPageConnector(PaginationControls)
 
@@ -18,7 +19,7 @@ export default class Shop extends Component {
       <div className='container-fluid'>
           <div className='row'>
                 <div className='col bg-dark text-white'>
-                    <div className='navbar-brand'>SPORTS STORE</div>
+                    <div className='navbar-brand'><Link to={"/shop/products"} style={{ color: '#FFF' }}>SPORTS STORE</Link></div>
                     <CartSummary {...this.props} />
                 </div>
           </div>
